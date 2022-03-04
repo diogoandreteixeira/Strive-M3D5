@@ -229,20 +229,20 @@ for(let i=10; i<=17; i++) {
 }
 
 // Show musics all
-for(let i=0; i<=musicDB.length; i++) {
+// for(let i=0; i<=musicDB.length; i++) {
 	
-	let db = musicDB[i] 
+// 	let db = musicDB[i] 
 
-	// Checking if it is exist 
-	if( sidebarMusicList  !== null && sidebarMusicList !== undefined) {
-	showSidebar(musicDB[i].name, sidebarMusicList)
-	}
+// 	// Checking if it is exist 
+// 	if( sidebarMusicList  !== null && sidebarMusicList !== undefined) {
+// 	showSidebar(musicDB[i].name, sidebarMusicList)
+// 	}
 
-	if( artistMusicList !== null && artistMusicList !== undefined) {
-		showArtistMusicList(db.musicTitle, db.img, db.length, artistMusicList, i+2)
-	}
+// 	if( artistMusicList !== null && artistMusicList !== undefined) {
+// 		showArtistMusicList(db.musicTitle, db.img, db.length, artistMusicList, i+2)
+// 	}
 
-	if( albumMusicList !== null && albumMusicList !== undefined) {
-		showAlbumMusicList(i+2, db.musicTitle, db.name, db.length, albumMusicList )
-	}
-}
+// 	if( albumMusicList !== null && albumMusicList !== undefined) {
+// 		showAlbumMusicList(i+2, db.musicTitle, db.name, db.length, albumMusicList )
+// 	}
+// }
