@@ -28,7 +28,7 @@ function formatTime(seconds) {
 
 const songs = function() {
 
-    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem").then((response) =>  response.json())
+    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q="+"abba").then((response) =>  response.json())
     .then ((data) => {console.log(data);
          data.data.forEach( 
              
@@ -61,28 +61,10 @@ const songs = function() {
 
             (object) => {nameContainer.innerHTML=`
 
-                        <img class="mr-1" src="${object.artist.picture_xl}"/>
+                        <img class="mr-1 relativeimg" src="${object.artist.picture_xl}"/>
                             Verified artist
                             <h1 class="header-text">${object.artist.name} </h1>
                         <p>37,120,733 monthly listeners</p>
                 
                 
-                `})
-
-
-
-
-
-
-
-
-
-
-         )
-    
-    
-    
-    })
-
-    
-}   
+                `}))})}   
