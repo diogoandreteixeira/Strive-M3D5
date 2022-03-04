@@ -12,7 +12,6 @@ let albumHeader = document.getElementById("album-header")
 let albumMusicList = document.getElementById("album-music-list")
 
 const albums = function() {
-
     fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem").then((response) =>  response.json())
     .then ((data) => {console.log(data);
          data.data.forEach( 
@@ -31,12 +30,7 @@ const albums = function() {
          </div>
 `}
          )
-    
-    
-    
     })
-
-    
 }   
 
 
@@ -74,11 +68,8 @@ const albumPage = function() {
                  </div>
                </div>
              </div>
-` 
-
+`
    })
-
-    
 }  
 
 const albumTitles = function() {
@@ -109,12 +100,7 @@ const albumTitles = function() {
        <!-- place  -->
      </div>
 `}
-)
-    
-    
-    
-    })
-
-    
+)   
+    })  
 } 
 
