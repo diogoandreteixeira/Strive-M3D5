@@ -7,9 +7,12 @@ const container = document.getElementById("list")
 
 const nameContainer = document.getElementById("nameContainer")
 
+const List = document.getElementById("sidelist")
+
+let queryFromImput = document.getElementById("searchBar").value
 
 
-
+console.log(queryFromImput)
 function formatTime(seconds) {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
@@ -28,10 +31,15 @@ function formatTime(seconds) {
 
 const songs = function() {
 
-    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q="+"abba").then((response) =>  response.json())
+    let queryFromImput = document.getElementById("searchBar").value
+
+
+    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q="+ queryFromImput).then((response) =>  response.json())
     .then ((data) => {console.log(data);
+        container.innerHTML="",
          data.data.forEach( 
              
+            
              
             
              (object) => {container.innerHTML+=`
@@ -67,4 +75,34 @@ const songs = function() {
                         <p>37,120,733 monthly listeners</p>
                 
                 
-                `}))})}   
+                `},
+                sidelist.innerHTML="",
+              data.data.forEach(
+                  (object) => {sidelist.innerHTML+=`
+                 
+                    <a href="#">${object.artist.name}  </a>`})
+                    
+                    
+                
+                
+                
+                
+                ))})}   
+// const sideList = function() {
+//     fetch ("https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem").then((response)=> response.json())
+//     .then ((data) => {console.log(data);
+            
+//              data.data.forEach(
+
+//              (object) => {List.innerHTML+=`
+        
+//             <a>${object.artist.name} </a>
+//         `})}
+
+let button = document.getElementById("button1")
+let search = function() {
+
+        
+        button.addEventListener("click")
+
+}

@@ -259,3 +259,15 @@ i:hover {
   margin-left: 100px;
   margin-bottom: -900px;
 }
+#searchBar {
+  transform: translateX(500px);
+}
+#button1 {
+  width: 80px;
+  height: 30px;
+  transform: translateX(150px);
+  background-color: #111;
+  color: white;
+  border-color: rgba(34, 33, 33, 0.144);
+  border-radius: 50px;
+}
